@@ -20,10 +20,13 @@
 
 <div class="max-w-xl mx-auto flex flex-col justify-center items-center">
 
-  <div class="space-y-4 w-full flex flex-col justify-center items-center">
+  <div class="space-y-8 w-full flex flex-col justify-center items-center">
 
-    <%= render(CodeComponent.new(text: "gem 'railwind', '~> 0.1.15'")) %>
-    <%= render(CodeComponent.new(text: "gem install railwind")) %>
+    <%= render(CodeComponent.new(text: "")) do %>
+      <span class="text-xl">
+        gem "railwind"
+      </span>
+    <% end %>
 
     <%= link_to components_button_path, class: "font-semibold" do %>
 
@@ -46,6 +49,41 @@
       </button>
 
     <% end %>
+
+  </div>
+
+</div>
+
+<div class="max-w-3xl mx-auto pb-24">
+
+  <div
+    class="mt-24 w-full border shadow shadow-xl bg-white rounded p-6 text-xl"
+    style="transform: rotate(-1deg)"
+  >
+
+    <h3 class="font-semibold text-xl mb-2">Hey there!</h3>
+    <p class="mb-4 leading-8">
+      My name is Christian, and I'm the creator of Railwind. I built this tool
+      to help Rails developers like you build beautiful, responsive, and
+      accessible web applications with Tailwind CSS.
+    </p>
+    <p class="mb-4 leading-8">Funny enough, I'm _mostly_ a JavaScript dev and was heavily influenced
+      by
+      <a
+        href="https://ui.shadcn.com/"
+        target="_blank"
+        class="font-semibold border-b border-black"
+      >shadcn/ui</a>
+      .. basically this but for React apps. I'm also super new to Rails and was
+      searching for something like shadcn for a side project I'm working on.
+    </p>
+    <p class="mb-4 leading-8">
+      Long story short, I couldn't find anything like it and this became my
+      first real Rails project.
+    </p>
+    <p class="mb-6 leading-8">Hope you find it useful! Please feel free to submit any issues or pull
+      request.</p>
+    <p>Christian</p>
 
   </div>
 
