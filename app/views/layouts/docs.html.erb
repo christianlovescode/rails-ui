@@ -49,7 +49,9 @@
           <%= link_to "Radio", components_button_path %>
           <%= link_to "Select", components_button_path %>
           <%= link_to "Table", components_button_path %>
-          <%= link_to "Tabs", components_button_path %>
+          <%= link_to "Tabs",
+          components_tabs_path,
+          class: ("font-bold text-rose-600" if current_page?(components_tabs_path)) %>
           <%= link_to "Text", components_button_path %>
           <%= link_to "Textarea", components_button_path %>
           <%= link_to "Toggle", components_button_path %>

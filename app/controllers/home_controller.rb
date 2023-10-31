@@ -6,4 +6,8 @@ class HomeController < ApplicationController
   def button
    render layout: "docs"
   end 
+
+  def tabs
+   render layout: "docs"
+  end
 end

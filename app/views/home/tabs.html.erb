@@ -1,0 +1,161 @@
+<div class="grid grid-cols-6 gap-6">
+
+  <section class="col-span-4">
+    <%= render(ComponentDetailsComponent.new(title: "Tabs")) do %>
+
+      <%= render(TabComponent.new(id: "demo", tabs: ["Tab 1", "Tab 2"])) do %>
+        <section>
+          Tab content 1
+        </section>
+        <section>
+          Tab content 2
+        </section>
+      <% end %>
+
+    <% end %>
+
+    <h3 id="installation" class="font-semibold text-xl mb-2">Installation</h3>
+
+    <div class="mb-12">
+
+      <%= render(TabComponent.new(id: "demo", tabs: ["Install with gem", "Copy the code"])) do %>
+        <section class="py-2 pt-6">
+
+          <%# Step 1 %>
+          <div class="flex items-start gap-6 relative mb-6">
+            <%= render(NumberIconComponent.new(text: "1")) %>
+            <div class="w-full">
+              <label class="font-semibold">
+                Install dependencies and the Railwind gem
+              </label>
+              <div class="space-y-2">
+                <%= render(CodeComponent.new(text: "gem 'tailwindcss-rails'")) %>
+                <%= render(CodeComponent.new(text: "gem 'view_component'")) %>
+                <%= render(CodeComponent.new(text: "gem 'railwind'")) %>
+              </div>
+
+            </div>
+          </div>
+
+          <%# Step 2 %>
+          <div class="flex items-start gap-6 relative">
+            <%= render(NumberIconComponent.new(text: "2")) %>
+            <div class="w-full">
+              <label class="font-semibold">
+                Run the following command
+              </label>
+
+              <div class="space-y-2">
+                <%= render(CodeComponent.new(text: "bin/rails generate railwind:tabs")) %>
+
+                <div>
+                  
+                   <pre class="highlight mb-0">
+                    <code style="white-space: pre-line;">
+                      app/
+                      ├── components/
+                      |   ├── tab_component.rb
+                      |   └── tab_component.html.erb
+                      └── javascript/
+                          └── controllers/
+                              └── tabs_controller.js
+                    </code>
+                  </pre> 
+                  <p class="text-gray-500">Generated output</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-2">
+          <p>
+            1. Create a new file in
+            <code class="font-semibold">app/components/tab_component.html.erb</code>
+            and add the following code:
+          </p>
+
+          <pre class="highlight">
+            <code>
+              <%= syntax_highlight(
+                File.read(Rails.root + "app/components/tab_component.html.erb")
+              ) %>
+            </code>
+          </pre>
+
+          <p class="mt-4">
+            2. Create a new file in
+            <code class="font-semibold">app/components/tab_component.rb</code>
+            and add the following code:
+          </p>
+
+          <pre class="highlight">
+            <%= syntax_highlight(File.read(Rails.root + "app/components/tab_component.rb")) %>
+          </pre>
+
+          <p class="mt-4">
+            2. Create a new file in
+            <code class="font-semibold">app/javascript/controllers/tabs_controller.js</code>
+            and add the following code:
+          </p>
+
+          <pre class="highlight">
+            <%= syntax_highlight(
+              File.read(Rails.root + "app/javascript/controllers/tabs_controller.js")
+            ) %>
+          </pre>
+
+        </section>
+      <% end %>
+
+
+  <h3 id="configuration" class="font-semibold text-xl mt-12">Configuration</h3>
+  <p class="mb-2 mt-2">
+    The TabComponent requires the following properties to be initialized:
+    <ul class="space-y-2">
+      <li>
+        <code class="font-semibold">- id</code> (String): A unique identifier for the tab component. This is used to differentiate multiple instances of the tab component on the same page. For example, in the provided code, the id is set to "demo".
+      </li>
+      <li>
+        <code class="font-semibold">- tabs</code> (Array of Strings): An array of strings where each string represents the title of a tab. The order of the strings in the array corresponds to the order of the tabs in the component. For example, in the provided code, the tabs array is ["Tab 1", "Tab 2"], which means the component will have two tabs titled "Tab 1" and "Tab 2" respectively.
+      </li>
+    </ul>
+  </p>
+
+  <p class="mt-2">In addition to these props, the TabComponent also requires a block of content to be provided. This block of content should contain one <code>section</code> element for each tab, where the content of each section corresponds to the content of each tab. The order of the sections should match the order of the tabs.</p>
+      
+
+      <div class="mb-12"></div>
+
+      <h3 id="examples" class="font-semibold text-xl mb-2 mt-12 mb-12">Usage</h3>
+      <div class="mb-12">
+        <pre class="highlight">
+          <%= syntax_highlight(File.read(Rails.root + "app/views/home/_tabs_usage.html.erb")) %>
+        </pre>
+      </div>
+
+      
+
+      
+
+    </div>
+
+  </section>
+
+  <section class="col-span-2">
+
+    <ul>
+      <li>
+        <%= link_to "Installation", components_tabs_path(anchor: "installation") %>
+      </li>
+      <li>
+        <%= link_to "Configuration", components_tabs_path(anchor: "configuration") %>
+      </li>
+      <li>
+        <%= link_to "Examples", components_tabs_path(anchor: "examples") %>
+      </li>
+    </ul>
+
+  </section>
+
+</div>
