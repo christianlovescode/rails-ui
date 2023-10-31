@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Railwind</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <style>
+  <%= Rouge::Themes::ThankfulEyes.render(:scope => '.highlight') %>
+  </style>
+
+  <body>
+    <%= render(NavComponent.new()) %>
+
+    <main class="container mx-auto mt-28 px-5 flex grid grid-cols-6 gap-6">
+
+      <div class="col-span-1">
+
+        <%= render(NavSectionComponent.new(title: "Getting started")) do %>
+          <%= link_to "About", components_button_path %>
+          <%= link_to "Installation", components_button_path %>
+          <%= link_to "Changelog", components_button_path %>
+        <% end %>
+
+        <%= render(NavSectionComponent.new(title: "Components")) do %>
+          <%= link_to "Accordion", components_button_path %>
+          <%= link_to "Alert", components_button_path %>
+          <%= link_to "Avatar", components_button_path %>
+          <%= link_to "Badge", components_button_path %>
+          <%= link_to "Button",
+          components_button_path,
+          class: ("font-bold text-rose-600" if current_page?(components_button_path)) %>
+          <%= link_to "Card", components_button_path %>
+          <%= link_to "Checkbox", components_button_path %>
+          <%= link_to "Container", components_button_path %>
+          <%= link_to "Code", components_button_path %>
+          <%= link_to "Dropdown", components_button_path %>
+          <%= link_to "Form", components_button_path %>
+          <%= link_to "Input", components_button_path %>
+          <%= link_to "Label", components_button_path %>
+          <%= link_to "Modal", components_button_path %>
+          <%= link_to "Nav", components_button_path %>
+          <%= link_to "Radio", components_button_path %>
+          <%= link_to "Select", components_button_path %>
+          <%= link_to "Table", components_button_path %>
+          <%= link_to "Tabs", components_button_path %>
+          <%= link_to "Text", components_button_path %>
+          <%= link_to "Textarea", components_button_path %>
+          <%= link_to "Toggle", components_button_path %>
+          <%= link_to "Tooltip", components_button_path %>
+        <% end %>
+
+      </div>
+      <div class="col-span-5">
+        <%= yield %>
+      </div>
+
+    </main>
+  </body>
+</html>

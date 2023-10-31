@@ -1,0 +1,26 @@
+<% base_classes =
+  "px-4 py-2 rounded-full transition hover:opacity-90 hover:shadow border-2 
+  font-semibold flex items-center justify-center gap-2"
+
+variant_classes =
+  case @variant
+  when "primary"
+    "border-black bg-black text-white"
+  when "secondary"
+    "border-gray-500 bg-gray-500 text-white"
+  when "outline"
+    "border-gray-500 text-gray-500"
+  when "ghost"
+    "border-transparent bg-transparent text-gray-500 hover:bg-gray-200"
+  when "danger"
+    "border-red-500 bg-red-500 text-white"
+  else
+    "bg-blue-500 text-white"
+  end
+
+tailwind_classes = "#{base_classes} #{variant_classes}" %>
+
+<button type="<%= @type %>" class="<%= tailwind_classes %>">
+  <%= content %>
+  <%= @text %>
+</button>
