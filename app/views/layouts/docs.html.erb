@@ -29,33 +29,40 @@
         <% end %>
 
         <%= render(NavSectionComponent.new(title: "Components")) do %>
-          <%= link_to "Accordion", components_button_path %>
-          <%= link_to "Alert", components_button_path %>
-          <%= link_to "Avatar", components_button_path %>
-          <%= link_to "Badge", components_button_path %>
+          <%= link_to "Accordion", components_button_path, class: "opacity-20" %>
+
+          <%= link_to "Avatar", components_button_path, class: "opacity-20" %>
+          <%= link_to "Badge", components_button_path, class: "opacity-20" %>
           <%= link_to "Button",
           components_button_path,
           class: ("font-bold text-rose-600" if current_page?(components_button_path)) %>
-          <%= link_to "Card", components_button_path %>
-          <%= link_to "Checkbox", components_button_path %>
-          <%= link_to "Container", components_button_path %>
-          <%= link_to "Code", components_button_path %>
-          <%= link_to "Dropdown", components_button_path %>
-          <%= link_to "Form", components_button_path %>
-          <%= link_to "Input", components_button_path %>
-          <%= link_to "Label", components_button_path %>
-          <%= link_to "Modal", components_button_path %>
-          <%= link_to "Nav", components_button_path %>
-          <%= link_to "Radio", components_button_path %>
-          <%= link_to "Select", components_button_path %>
-          <%= link_to "Table", components_button_path %>
+
+          <%= link_to "Callout",
+          components_callout_path,
+          class: ("font-bold text-rose-600" if current_page?(components_callout_path)) %>
+          <%= link_to "Card",
+          components_card_path,
+          class: ("font-bold text-rose-600" if current_page?(components_card_path)) %>
+          <%= link_to "Checkbox", components_button_path, class: "opacity-20" %>
+          <%= link_to "Container", components_button_path, class: "opacity-20" %>
+          <%= link_to "Code", components_button_path, class: "opacity-20" %>
+          <%= link_to "Dropdown", components_button_path, class: "opacity-20" %>
+          <%= link_to "Form", components_button_path, class: "opacity-20" %>
+          <%= link_to "Input", components_button_path, class: "opacity-20" %>
+          <%= link_to "Label", components_button_path, class: "opacity-20" %>
+          <%= link_to "Modal", components_button_path, class: "opacity-20" %>
+          <%= link_to "Nav", components_button_path, class: "opacity-20" %>
+          <%= link_to "Progress", components_button_path, class: "opacity-20" %>
+          <%= link_to "Radio", components_button_path, class: "opacity-20" %>
+          <%= link_to "Select", components_button_path, class: "opacity-20" %>
+          <%= link_to "Table", components_button_path, class: "opacity-20" %>
           <%= link_to "Tabs",
           components_tabs_path,
           class: ("font-bold text-rose-600" if current_page?(components_tabs_path)) %>
-          <%= link_to "Text", components_button_path %>
-          <%= link_to "Textarea", components_button_path %>
-          <%= link_to "Toggle", components_button_path %>
-          <%= link_to "Tooltip", components_button_path %>
+          <%= link_to "Text", components_button_path, class: "opacity-20" %>
+          <%= link_to "Textarea", components_button_path, class: "opacity-20" %>
+          <%= link_to "Toggle", components_button_path, class: "opacity-20" %>
+          <%= link_to "Tooltip", components_button_path, class: "opacity-20" %>
         <% end %>
 
       </div>

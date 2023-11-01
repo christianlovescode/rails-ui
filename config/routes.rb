@@ -8,8 +8,12 @@ Rails.application.routes.draw do
 
 
   root 'home#index'
+
   get 'components/button', to: 'home#button'
+  get 'components/callout', to: 'home#callout'
+  get 'components/card', to: 'home#card'
   get 'components/tabs', to: 'home#tabs'
+ 
 
   get '/components', to: redirect('/components/button')
 

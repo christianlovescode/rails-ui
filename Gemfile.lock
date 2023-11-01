@@ -1,7 +1,7 @@
 PATH
   remote: /Users/cbryant/Desktop/projects/railwind
   specs:
-    railwind (0.1.20)
+    railwind (0.1.22)
       rails (~> 7.0)
       view_component (~> 3.0)
 
@@ -141,7 +141,7 @@ GEM
     minitest (5.20.0)
     msgpack (1.7.2)
     mutex_m (0.1.2)
-    net-imap (0.4.2)
+    net-imap (0.4.3)
       date
       net-protocol
     net-pop (0.1.2)
@@ -249,7 +249,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    view_component (3.6.0)
+    view_component (3.7.0)
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)

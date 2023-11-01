@@ -1,0 +1,45 @@
+<%= render(ComponentDetailsComponent.new(title: "Callout")) do %>
+
+  <div class="max-w-6xl mx-auto w-full">
+
+    <div class="grid grid-cols-2 gap-6 w-full">
+
+      <%= render(
+        CalloutComponent.new(
+          title: "Success message",
+          description: "Hello world this is a success message",
+          variant: "success"
+        )
+      ) %>
+
+      <%= render(
+        CalloutComponent.new(
+          title: "Danger message",
+          description: "Hello world this is a danger message",
+          variant: "danger"
+        )
+      ) %>
+
+      <%= render(
+        CalloutComponent.new(
+          title: "Warning message",
+          description: "Hello world this is a warning message",
+          variant: "warning"
+        )
+      ) %>
+
+      <%= render(
+        CalloutComponent.new(
+          title: "Info message",
+          description: "Hello world this is an info message",
+          variant: "info"
+        )
+      ) %>
+
+    </div>
+
+  </div>
+
+<% end %>
+
+<%= render(CodeComponent.new(text: "bin/rails generate railwind:callout")) %>

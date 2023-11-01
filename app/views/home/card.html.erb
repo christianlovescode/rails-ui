@@ -1,0 +1,13 @@
+<%= render(ComponentDetailsComponent.new(title: "Card")) do %>
+
+  <div class="max-w-3xl mx-auto w-full">
+
+    <%= render(CardComponent.new()) do %>
+      I'm a card
+    <% end %>
+
+  </div>
+
+<% end %>
+
+<%= render(CodeComponent.new(text: "bin/rails generate railwind:card")) %>
