@@ -71,7 +71,7 @@ gem "tailwindcss-rails", "~> 2.0"
 
 gem "view_component"
 
-gem 'railwind', path: '/Users/cbryant/Desktop/projects/railwind'
+gem 'railwind'
 
 gem "erb-formatter"
 
