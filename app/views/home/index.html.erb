@@ -2,7 +2,6 @@
   class="flex flex-col justify-center items-center relative pt-24"
   style="background-size: 20px 20px; background-image: linear-gradient(#e8e8e8 1.5px, transparent 1.5px, transparent calc(100% - 1.5px), #e8e8e8 calc(100% - 1.5px)), linear-gradient(90deg, #e8e8e8 1.5px, transparent 1.5px, transparent calc(100% - 1.5px), #e8e8e8 calc(100% - 1.5px))"
 >
-
   <div class="max-w-6xl mx-auto">
     <h1
       class="font-black text-8xl mb-12 text-center relative "
@@ -11,25 +10,30 @@
       Tailwind component generator for Rails
     </h1>
   </div>
-
   <div
     class="absolute top-0 left-0 w-full h-full"
     style="background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,1)); z-index: 1;"
   ></div>
 </div>
-
 <div class="max-w-xl mx-auto flex flex-col justify-center items-center">
-
   <div class="space-y-8 w-full flex flex-col justify-center items-center">
-
-    <%= render(CodeComponent.new(text: "")) do %>
-      <span class="text-xl">
-        gem "railwind"
-      </span>
-    <% end %>
-
+    <aside class="bg-black text-white p-6 rounded-lg w-full max-w-lg font-mono">
+      <div class="flex justify-between items-center">
+        <div class="flex space-x-2 text-red-500">
+          <div class="w-3 h-3 rounded-full bg-red-500" ></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500" ></div>
+          <div class="w-3 h-3 rounded-full bg-green-500" ></div>
+        </div>
+        <p class="text-sm">bash</p>
+      </div>
+      <div class="mt-4">
+        <p class="text-green-400">$ gem install railwind</p>
+        <p class="text-white">Successfully installed railwind-0.1.25</p>
+        <p class="text-white">1 gem installed</p>
+        <p class="text-green-400">$</p>
+      </div>
+    </aside>
     <%= link_to components_button_path, class: "font-semibold" do %>
-
       <button
         class="
           bg-yellow-400
@@ -47,20 +51,14 @@
       >
         View documentation
       </button>
-
     <% end %>
-
   </div>
-
 </div>
-
 <div class="max-w-3xl mx-auto pb-24">
-
   <div
     class="mt-24 w-full border shadow shadow-xl bg-white rounded p-6 text-xl"
     style="transform: rotate(-1deg)"
   >
-
     <h3 class="font-semibold text-xl mb-2">Hey there!</h3>
     <p class="mb-4 leading-8">
       My name is Christian, and I'm the creator of Railwind. I built this tool
@@ -84,7 +82,5 @@
     <p class="mb-6 leading-8">Hope you find it useful! Please feel free to submit any issues or pull
       request.</p>
     <p>Christian</p>
-
   </div>
-
 </div>
