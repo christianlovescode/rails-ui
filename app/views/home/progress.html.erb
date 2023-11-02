@@ -1,0 +1,5 @@
+<%= render(ComponentDetailsComponent.new(title: "Progress")) do %>
+  <%= render(ProgressComponent.new(label: "Course Progress", value: 75)) %>
+<% end %>
+<h3 class="font-semibold text-xl mb-2">Installation</h3>
+<%= render(CodeComponent.new(text: "bin/rails generate railwind:progress")) %>

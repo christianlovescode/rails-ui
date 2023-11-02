@@ -156,7 +156,7 @@ GEM
     public_suffix (5.0.3)
     puma (6.4.0)
       nio4r (~> 2.0)
-    racc (1.7.1)
+    racc (1.7.2)
     rack (3.0.8)
     rack-session (2.0.0)
       rack (>= 3.0.0)
@@ -194,7 +194,7 @@ GEM
       rake (>= 12.2)
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
-    railwind (0.1.23)
+    railwind (0.1.25)
       rails (~> 7.0)
       view_component (~> 3.0)
     rake (13.1.0)
@@ -278,7 +278,7 @@ DEPENDENCIES
   jbuilder
   puma (>= 5.0)
   rails (~> 7.1.0)
-  railwind
+  railwind (~> 0.1.25)
   redcarpet
   redis (>= 4.0.1)
   rouge

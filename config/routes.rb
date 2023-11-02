@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   get 'components/callout', to: 'home#callout'
   get 'components/card', to: 'home#card'
   get 'components/tabs', to: 'home#tabs'
+  get 'components/progress', to: 'home#progress'
  
-
   get '/components', to: redirect('/components/button')
 
 end

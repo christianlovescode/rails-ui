@@ -6,37 +6,28 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <style>
-  <%= Rouge::Themes::ThankfulEyes.render(:scope => '.highlight') %>
+    <%= Rouge::Themes::ThankfulEyes.render(:scope => '.highlight') %>
   </style>
-
   <body>
     <%= render(NavComponent.new()) %>
-
     <main class="container mx-auto mt-28 px-5 flex grid grid-cols-6 gap-6">
-
       <div class="col-span-1">
-
         <%= render(NavSectionComponent.new(title: "Getting started")) do %>
           <%= link_to "About", components_button_path %>
           <%= link_to "Installation", components_button_path %>
           <%= link_to "Changelog", components_button_path %>
         <% end %>
-
         <%= render(NavSectionComponent.new(title: "Components")) do %>
           <%= link_to "Accordion", components_button_path, class: "opacity-20" %>
-
           <%= link_to "Avatar", components_button_path, class: "opacity-20" %>
           <%= link_to "Badge", components_button_path, class: "opacity-20" %>
           <%= link_to "Button",
           components_button_path,
           class: ("font-bold text-rose-600" if current_page?(components_button_path)) %>
-
           <%= link_to "Callout",
           components_callout_path,
           class: ("font-bold text-rose-600" if current_page?(components_callout_path)) %>
@@ -52,7 +43,9 @@
           <%= link_to "Label", components_button_path, class: "opacity-20" %>
           <%= link_to "Modal", components_button_path, class: "opacity-20" %>
           <%= link_to "Nav", components_button_path, class: "opacity-20" %>
-          <%= link_to "Progress", components_button_path, class: "opacity-20" %>
+          <%= link_to "Progress",
+          components_progress_path,
+          class: ("font-bold text-rose-600" if current_page?(components_progress_path)) %>
           <%= link_to "Radio", components_button_path, class: "opacity-20" %>
           <%= link_to "Select", components_button_path, class: "opacity-20" %>
           <%= link_to "Table", components_button_path, class: "opacity-20" %>
@@ -64,12 +57,10 @@
           <%= link_to "Toggle", components_button_path, class: "opacity-20" %>
           <%= link_to "Tooltip", components_button_path, class: "opacity-20" %>
         <% end %>
-
       </div>
       <div class="col-span-5">
         <%= yield %>
       </div>
-
     </main>
   </body>
 </html>

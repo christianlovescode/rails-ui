@@ -71,7 +71,7 @@ gem "tailwindcss-rails", "~> 2.0"
 
 gem "view_component"
 
-gem 'railwind'
+gem 'railwind', '~> 0.1.25'
 
 gem "erb-formatter"
 

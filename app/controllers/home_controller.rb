@@ -19,4 +19,8 @@ class HomeController < ApplicationController
   def card
     render layout: "docs"
   end 
+
+  def progress
+    render layout: "docs"
+  end 
 end
