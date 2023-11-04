@@ -12,13 +12,19 @@ class HomeController < ApplicationController
     render layout: "docs"
    end
 
+  def card
+    render layout: "docs"
+  end 
+
+  def checkbox 
+    render layout: "docs"
+  end
+
   def tabs
    render layout: "docs"
   end
 
-  def card
-    render layout: "docs"
-  end 
+ 
 
   def progress
     render layout: "docs"

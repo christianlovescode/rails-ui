@@ -134,7 +134,7 @@ GEM
     minitest (5.20.0)
     msgpack (1.7.2)
     mutex_m (0.1.2)
-    net-imap (0.4.3)
+    net-imap (0.4.4)
       date
       net-protocol
     net-pop (0.1.2)
@@ -194,7 +194,7 @@ GEM
       rake (>= 12.2)
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
-    railwind (0.1.25)
+    railwind (0.1.26)
       rails (~> 7.0)
       view_component (~> 3.0)
     rake (13.1.0)

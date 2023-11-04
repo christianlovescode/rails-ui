@@ -1,0 +1,9 @@
+<%= render(ComponentDetailsComponent.new(title: "Checkbox")) do %>
+  <div class="max-w-3xl mx-auto w-full space-y-6">
+    <div>
+      <%= render(CheckboxComponent.new(name: "foo", label: "Hello world", description: "Check me out now", checked: true, disabled: false )) %>
+    </div>
+    <%= render(CheckboxComponent.new(name: "bar", label: "Enable subscriptions", description: "Availbe for paid plans only", checked: false, disabled: true)) %>
+  </div>
+<% end %>
+<%= render(CodeComponent.new(text: "bin/rails generate railwind:checkbox")) %>

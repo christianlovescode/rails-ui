@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'components/button', to: 'home#button'
   get 'components/callout', to: 'home#callout'
   get 'components/card', to: 'home#card'
+  get 'components/checkbox', to: 'home#checkbox'
   get 'components/tabs', to: 'home#tabs'
   get 'components/progress', to: 'home#progress'
  
